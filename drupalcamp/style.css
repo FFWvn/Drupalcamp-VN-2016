@@ -212,7 +212,7 @@ a {
 }
 
 .feature {
-  background: url("img/feature.png") no-repeat scroll 0 0;
+  background: url("img/feature.png") no-repeat scroll 0 0 / 100% auto;
   color: #fff;
   padding-bottom: 90px;
   padding-top: 100px;

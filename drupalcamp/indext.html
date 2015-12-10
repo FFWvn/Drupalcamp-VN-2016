@@ -3,6 +3,8 @@
   <head>
     <title>Drupalcamp</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="script.js"></script>
   </head>
 
   <body>
@@ -18,19 +20,50 @@
           <div class="navigation">
             <ul class="nav navbar-nav clearfix">
               <li>
-                <a href="#">speaker</a>
+                <a href="#speakers">speaker</a>
               </li>
               <li>
-                <a href="#">Schedule</a>
+                <a href="#schedule">Schedule</a>
               </li>
               <li>
-                <a href="#">Location</a>
+                <a href="#where">Location</a>
               </li>
             </ul>
           </div>
 
           <div class="login">
-            <a href="#">Login | Sign up</a>
+            <div class="toboggan-container" id="toboggan-container">
+              <div class="toboggan-login-link-container" id="toboggan-login-link-container">
+                <a class="toboggan-login-link" id="toboggan-login-link" href="#">Log in | Register</a>
+              </div>
+              <div class="user-login-block toggleboggan_setup-processed" id="toboggan-login">
+                <input type="user" class="form-text form-user" value="" name="search_block_form" placeholder="Username">
+                <input type="pass" class="form-text form-pass" value="" name="search_block_form" placeholder="Password">
+
+                <div id="edit-actions--2" class="form-actions form-wrapper">
+                  <input type="submit" class="form-submit" value="Log in" name="op" id="edit-submit--2">
+                   or 
+                  <input type="submit" class="form-submit" value="Sign up" name="op" id="edit-submit--2">
+                </div>
+
+                <div class="item-list">
+                  <ul>
+                    <li class="first">
+                      <a title="Forgot your password?" href="#">Forgot your password?</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="social">
+                  <p>Login width</p>
+                  <ul>
+                    <li class="facebook"><a href="#">facebook</a></li>
+                    <li class="twiter"><a href="#">twiter</a></li>
+                    <li class="google"><a href="#">google</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -47,60 +80,82 @@
     </div>
 
     <div class="content">
-      <div class="speakers">
-        <div class="row">
-          <div class="block-title">
-            <h2>Featured Speaker</h2>
-          </div>
+      <div id="speakers" class="region speakers">
+        <div class="row clearfix">
+          <h2 class="block-title">Featured Speaker</h2>
 
           <ul>
             <li>
               <div class="speakers__img"><img src="img/speaker-01.png" alt="Logo"/></div>
-              <div class="speakers__author-name">John Doe</div>
-              <div class="speakers__author-description">Group CEO</div>
-              <p class="speakers__text">Expert Frontend Drupal developer, and community organizer</p>
+              <div class="speakers__content">
+                <div class="speakers__author-name">John Doe</div>
+                <p class="speakers__text">Expert Frontend Drupal developer, and community organizer</p>
+              </div>
             </li>
             <li>
               <div class="speakers__img"><img src="img/speaker-01.png" alt="Logo"/></div>
-              <div class="speakers__author-name">John Doe</div>
-              <div class="speakers__author-description">Group CEO</div>
-              <p class="speakers__text">Drupal Developer at Blink Reaction and co-maintainer of the Flag module</p>
+              <div class="speakers__content">
+                <div class="speakers__author-name">John Doe</div>
+                <p class="speakers__text">Drupal Developer at Blink Reaction and co-maintainer of the Flag module</p>
+              </div>
             </li>
             <li>
               <div class="speakers__img"><img src="img/speaker-01.png" alt="Logo"/></div>
-              <div class="speakers__author-name">John Doe</div>
-              <div class="speakers__author-description">Group CEO</div>
-              <p class="speakers__text">Expert Frontend Drupal developer, and community organizer</p>
+              <div class="speakers__content">
+                <div class="speakers__author-name">John Doe</div>
+                <p class="speakers__text">Expert Frontend Drupal developer, and community organizer</p>
+              </div>
             </li>
             <li>
               <div class="speakers__img"><img src="img/speaker-01.png" alt="Logo"/></div>
-              <div class="speakers__author-name">John Doe</div>
-              <div class="speakers__author-description">Group CEO</div>
-              <p class="speakers__text">Drupal Developer at Blink Reaction and co-maintainer of the Flag module</p>
+              <div class="speakers__content">
+                <div class="speakers__author-name">John Doe</div>
+                <p class="speakers__text">Drupal Developer at Blink Reaction and co-maintainer of the Flag module</p>
+              </div>
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="">
+      <div id="schedule" class="region schedule">
         <div class="row">
-          <div class="block-title">
-            <h2>Schedule</h2>
-          </div>
+          <h2 class="block-title">Schedule</h2>
 
-          <div class="">
-            <div class="">Time</div>
-            <div class="">Speaker</div>
-            <div class="">Topic</div>
-          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Speaker</th>
+                <th>Topic</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="even">
+                <td>8:00 - 9:00</td>
+                <td class="name">Jane Roe</td>
+                <td>Registration and Networking</td>
+                <td><a href="#">Register</a></td>
+              </tr>
+              <tr class="odd">
+                <td>9:00 - 9:05</td>
+                <td class="name">Jane Roe</td>
+                <td>Welcome</td>
+                <td><a href="#">Register</a></td>
+              </tr>
+              <tr class="even">
+                <td>9:10 - 9:25</td>
+                <td class="name">Jane Roe</td>
+                <td>Drupal Camp Keynote</td>
+                <td><a href="#">Register</a></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
-      <div class="">
-        <div class="row">
-          <div class="block-title">
-            <h2>Where?</h2>
-          </div>
+      <div id="where" class="region where">
+        <div class="row clearfix">
+          <h2 class="block-title">Where?</h2>
           <div class="description">
             <p>Trường Đại học Bách Khoa Hà Nội, Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</p>
           </div>
@@ -108,17 +163,15 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2633.805247009098!2d105.84431371200765!3d21.002131250313184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3135ac76ccab6dd7%3A0x55e92a5b07a97d03!2zxJDhuqFpIEjhu41jIELDoWNoIEtob2EgSMOgIE7hu5lpLCA5MSBUcuG6p24gxJDhuqFpIE5naMSpYSwgQsOhY2ggS2hvYSwgSGFpIELDoCBUcsawbmcsIEjDoCBO4buZaQ!3m2!1d21.002210599999998!2d105.8447903!5e0!3m2!1sen!2s!4v1449483404537" width="1350" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
 
-      <div class="">
+      <div id="sponsors" class="region sponsors">
         <div class="row">
-          <div class="block-title">
-            <h2>Sponsors</h2>
-          </div>
+          <h2 class="block-title">Sponsors</h2>
 
           <div class="logo-vn">
             <img src="img/logo-1.png" alt="Logo"/>
           </div>
 
-          <div class="list-logo">
+          <div class="list-logo clearfix">
             <ul>
               <li><img src="img/logo-2.png" alt="Logo"/></li>
               <li><img src="img/logo-3.png" alt="Logo"/></li>
@@ -131,20 +184,28 @@
     </div>
 
     <div class="footer">
-      <div class="footer-panel">
-        <div class="row">
-          <div class="block-title">
-            <h2>Register today</h2>
-          </div>
+      <div class="region footer-panel">
+        <div id="register" class="register">
+          <div class="row clearfix">
+            <h2 class="block-title">Register today</h2>
 
-          <div class="description">
-            <p> Many sponsorship levels are available along with In-Kind, direct sponsorship of coffee, lunch and the after party.</p>
+            <div class="description">
+              <p> Many sponsorship levels are available along with In-Kind, direct sponsorship of coffee, lunch and the after party.</p>
+            </div>
+
+            <input type="name" class="form-text form-name" value="" name="search_block_form" placeholder="Name">
+            <input type="email" class="form-text form-email" value="" name="search_block_form" placeholder="Email">
+            <input type="submit" class="form-submit" value="Submit now" name="op" id="edit-submit--2">
           </div>
         </div>
       </div>
 
-      <div class="copyright">
-        @2015 drupalcampvie
+      <div class="footer-bottom">
+        <div class="row">
+          <div class="copyright">
+            @2015 drupalcampvie
+          </div>
+        </div>
       </div>
     </div>
   </body>

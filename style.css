@@ -88,6 +88,10 @@ a {
   padding: 6px 0;
 }
 
+.logo a {
+  display: inline-block;
+}
+
 .branding-bottom {
   float: left;
   max-height: 75px;
@@ -212,7 +216,7 @@ a {
 }
 
 .feature {
-  background: url("img/feature.png") no-repeat scroll 0 0 / 100% auto;
+  background: url("img/feature.png") no-repeat scroll 0 0;
   color: #fff;
   padding-bottom: 90px;
   padding-top: 100px;
@@ -377,7 +381,7 @@ iframe {
 .register .form-text {
   border-radius: 3px;
   border: none;
-  margin: 0 12px;
+  margin: 0 22px;
   max-width: 230px;
   padding: 14px 10px;
 }
@@ -396,10 +400,6 @@ iframe {
 }
 
 @media all and (max-width: 568px) {
-  .feature-content {
-    padding: 0 30px;
-  }
-
   .sponsors .logo-vn {
     margin-bottom: 30px;
   }
@@ -434,24 +434,68 @@ iframe {
     text-align: center;
     width: 100%;
   }
-
-  .login {
-    padding: 0 0 20px;
-    text-align: center;
-    width: 100%;
-  }
 }
 
 @media all and (max-width: 768px) {
-  .branding {
-    float: none;
-    text-align: center;
-    width: 100%;
+  .toggleMenu {
+    border-bottom: 2px solid #a7a7a7;
+    float: right;
+    font-size: 0;
+    height: 20px;
+    position: relative;
+    width: 25px;
+    margin-right: 20px;
+    margin-top: 23px;
+  }
+
+  .toggleMenu::before {
+    border-bottom: 2px solid #a7a7a7;
+    bottom: 5px;
+    content: "";
+    position: absolute;
+    width: 25px;
+  }
+
+  .toggleMenu::after {
+    border-top: 2px solid #a7a7a7;
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 25px;
   }
 
   .branding-bottom {
+    display: none;
+  }
+
+  .branding-bottom.active {
+    display: block;
+  }
+
+  .branding {
+    display: inline-block;
+    text-align: center;
+    width: auto;
     float: none;
+    position: relative;
+  }
+
+  .branding-bottom {
+    position: absolute;
     width: 100%;
+    background: #fff;
+    max-height: none;
+    right: 0;
+  }
+
+  .navigation ul li {
+    float: none;
+  }
+
+  .login {
+    float: none;
+    padding: 0 0 20px;
+    text-align: center;
   }
 
   .region {
@@ -463,8 +507,33 @@ iframe {
   }  
 
   .feature {
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .feature h1 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 20px;
+  }
+
+  .feature p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .feature-content {
+    padding: 30px 50px;
+    background: url("img/feature.png") no-repeat scroll 0 0;
+  }
+
+  .feature .description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .feature p {
+    margin-bottom: 30px;
   }
 }
 
@@ -499,21 +568,38 @@ iframe {
   }
 }
 
+@media all and (min-width: 769px) {
+  .toggleMenu {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .feature {
+    background-size: 100% auto;
+  }
+}
+
 @media all and (min-width: 769px) and (max-width: 1024px) {
   .branding {
-    width: 35%;
+    width: 36%;
   }
 
   .branding-bottom {
-    width: 65%;
+    width: 64%;
+    display: block;
   }
 
   .navigation {
     width: 70%;
   }
 
+  .navigation ul li a {
+    padding: 15px 10px;
+  }
+
   .login {
-    padding: 25px 10px;
+    padding: 20px 10px 20px 0;
   }
 
   .speakers ul li .speakers__img {

@@ -37,5 +37,17 @@
       $('body,html').animate({ scrollTop: top_scroll - headerheight }, 600);
       return false;
     });
+
+    $('.logo a').click(function(){
+      $('body,html').animate({ scrollTop: 0}, 600);
+      return false;
+    });
+
+    $('.toggleMenu').click(function(){
+      $(this).toggleClass("active");
+      $('.branding-bottom').toggleClass("active");
+      return false;
+    });
   });
+
 } )( jQuery );

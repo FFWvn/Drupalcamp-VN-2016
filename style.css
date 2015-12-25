@@ -17,6 +17,7 @@ body {
   box-sizing: border-box;
 }
 
+
 .row:before, 
 .row:after {
   content: '';
@@ -613,4 +614,47 @@ iframe {
   .sponsors .list-logo ul li img {
     width: 100%;
   }
+}
+
+.ss-form-question {
+  display: inline-block;
+}
+
+.ffw-hidden {
+  display: none;
+}
+
+.ss-choices {
+  list-style: outside none none;
+  text-align: left;
+  padding-left: 0;
+  margin-left: -5px;
+}
+
+
+.customBox-left,
+.customBox-right {
+  margin-right: 20%;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.customBox-right {
+  margin-right: 0;
+}
+
+.ss-navigate {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* overrid style table of google form */
+#navigation-table {
+  display: inline-block;
+}
+
+.ss-q-title {
+  color: #fffc00;
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }

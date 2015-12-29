@@ -665,12 +665,13 @@ iframe {
 .thanks-page {
   background: #0E83CD;
 }
-.content {
+.thanks-page .content {
   color: white;
   font-size: 40px;
   margin: 100px auto;
   text-align: center;
   width: 80%;
+  line-height: 1;
 }
 .btn-back {
   border: 3px solid #fff;
@@ -713,3 +714,19 @@ iframe {
   transition: all 0.3s ease;
   z-index: -1;
 }
+
+@media all and (max-width: 1024px) {
+  .ss-form-question {
+    display: block;
+    padding: 0 20px;
+  }
+  .register .form-text {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 10px 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+

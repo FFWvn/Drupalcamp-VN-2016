@@ -102,7 +102,7 @@ a {
 .navigation {
   display: inline-block;
   text-align: center;
-  width: 80%;
+  width: 100%;
 }
 
 .navigation ul {
@@ -224,10 +224,6 @@ a {
   text-align: center;
 }
 
-.feature-content {
-  padding: 0 170px;
-}
-
 .feature h1 {
   font-size: 48px;
   font-weight: bold;
@@ -271,6 +267,8 @@ a {
 
 .speakers ul li .speakers__img img {
   border-radius: 100%;
+  width: 230px;
+  height: 230px;
 }
 
 .speakers ul li .speakers__author-name {
@@ -278,6 +276,14 @@ a {
   font-size: 24px;
   line-height: 28px;
   margin-bottom: 17px;
+}
+
+.speakers ul li .speakers__author-name a {
+  color: #333;
+}
+
+.speakers ul li .speakers__author-name a:hover {
+  color: #3f8ad6;
 }
 
 .speakers ul li .speakers__text {
@@ -362,6 +368,10 @@ iframe {
   width: 24%;
 }
 
+.sponsors .list-logo ul li img {
+  width: 100%;
+}
+
 .footer-panel {
   background: #1b2245;
   color: #ffffff;
@@ -383,7 +393,7 @@ iframe {
   border-radius: 3px;
   border: none;
   margin: 0 22px;
-  max-width: 230px;
+  max-width: 125px;
   padding: 14px 10px;
 }
 
@@ -540,10 +550,6 @@ iframe {
 }
 
 @media all and (min-width: 569px) and (max-width: 768px) {
-  .navigation {
-    width: 75%;
-  }
-
   .login {
     padding-right: 10px;
   }
@@ -592,10 +598,6 @@ iframe {
     display: block;
   }
 
-  .navigation {
-    width: 70%;
-  }
-
   .navigation ul li a {
     padding: 15px 10px;
   }
@@ -610,6 +612,7 @@ iframe {
 
   .speakers ul li .speakers__img img {
     width: 100%;
+    height: auto;
   }
 
   .sponsors .list-logo ul li img {
